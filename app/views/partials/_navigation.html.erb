@@ -6,9 +6,10 @@
 			</li>
 			<li class="col-md">
 				<%= link_to "Articulos", articles_path %>
+				
 			</li>
 			<% @categories.each do |category| %>
-			<li class="cold-md">
+			<li class="col-md">
 				<%= link_to category.name, category %>	
 			</li>
 			<%end%>

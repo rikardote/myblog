@@ -1,14 +1,11 @@
-<p id="notice"><%= notice %></p>
+<div class="container" style="margin:0 auto;">
+	<h1 style="color:<%=@category.color %>;"><%= @category.name %></h1>
+	<div class="row">
+			<%=render @category.articles%>
+		</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+	<%= link_to 'Edit', edit_category_path(@category) %> 
+	<%= link_to 'Back', categories_path %>
+	<%= @category.name %>
+</div>
 
-<p>
-  <strong>Color:</strong>
-  <%= @category.color %>
-</p>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
